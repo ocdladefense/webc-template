@@ -19,7 +19,7 @@ class MyWebComponent extends HTMLElement {
 
     constructor() {
         super();
-        
+        this.instanceVar1 = this.getAttribute("attr1");
         // Initialize things in the constructor.
     }
 
@@ -57,7 +57,7 @@ class MyWebComponent extends HTMLElement {
         // Register a mock for a given domain.
         // HttpClient.register("appdev.ocdla.org", new MyMock());
 
-        let data = "The custom component has rendered.";
+        let data = this.instanceVar1;
 
         // Make our http request and load the chapter from the Oregon Legislature website.
         const req = new Request(url);
