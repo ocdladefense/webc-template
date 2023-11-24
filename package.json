@@ -1,0 +1,33 @@
+{
+  "name": "@ocdladefense/webc-template",
+  "version": "1.0.0",
+  "description": "Custom web component template.",
+  "browser": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ocdladefense/webc-template.git"
+  },
+  "author": "José Bernal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ocdladefense/webc-template/issues"
+  },
+  "homepage": "https://github.com/ocdladefense/webc-events#readme",
+  "dependencies": {
+    "@ocdladefense/lib-http": "https://github.com/ocdladefense/node-lib-http",
+    "@ocdladefense/ors": "file:dev_modules/node-ors"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.18.13",
+    "@babel/preset-env": "^7.18.10",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-root-import": "^6.6.0",
+    "jsdoc": "^4.0.2"
+  }
+}
