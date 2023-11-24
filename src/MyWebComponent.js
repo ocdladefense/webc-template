@@ -1,6 +1,5 @@
-import { HttpClient } from "../node_modules/lib-http/HttpClient.js";
-import { Url } from "../node_modules/lib-http/Url.js";
-
+// import { HttpClient } from "../node_modules/lib-http/HttpClient.js";
+// import { Url } from "../node_modules/lib-http/Url.js";
 // import { ComponentHelper } from "../node_modules/ComponentHelper.js";
 
 export { MyWebComponent };
@@ -36,7 +35,7 @@ class MyWebComponent extends HTMLElement {
         const list = document.createElement("div");
         list.setAttribute("class", "statute");
         const style = document.createElement("style");
-        style.innerText = WebcOrs.getCss();
+        style.innerText = MyWebComponent.getCss();
 
         this.list = list;
 
@@ -52,20 +51,19 @@ class MyWebComponent extends HTMLElement {
         };
 
    
-        const client = new HttpClient();
+        // const client = new HttpClient();
         // client.toggleTest();
         let url = MyWebComponent.MyStaticMethod(this.instanceVar1);
-        
         // Register a mock for a given domain.
-        HttpClient.register("appdev.ocdla.org", new MyMock());
+        // HttpClient.register("appdev.ocdla.org", new MyMock());
 
-        
+        let data = "The custom component has rendered.";
 
         // Make our http request and load the chapter from the Oregon Legislature website.
         const req = new Request(url);
-        let resp = await client.send(req);
+        // let resp = await client.send(req);
 
-        let html = render(data);
+        let html = this.render(data);
 
         this.list.innerHTML = html;
     }
